@@ -86,6 +86,7 @@ public class TestIterator {
 
   @Test
   public void testAverageValues() {
+  public void testAverageValues() {
     list.add(33);
     list.add(77);
     list.add(44);
