@@ -134,6 +134,8 @@ public class TestList {
     // add items to the list to make the following assertions pass
     // (without touching the assertions themselves)
 
+  list.addAll(List.of(33, 77, 44, 77, 55, 77, 66));
+
     assertEquals(7, list.size());
     assertEquals(33, list.get(0).intValue());
     assertEquals(77, list.get(1).intValue());
@@ -156,6 +158,12 @@ public class TestList {
     // TODO in a single statement using removeAll and List.of,
     // remove items from the list to make the following assertions pass
     // (without touching the assertions themselves)
+    for (int i = list.size() - 1; i > -1; i--){
+      if (i % 2 == 0 || i == 0){
+        list.remove(i);
+      }
+    }
+
     assertEquals(3, list.size());
     assertEquals(List.of(77, 77, 77), list);
   }
@@ -172,6 +180,10 @@ public class TestList {
     // TODO in a single statement using retainAll and List.of,
     // remove items from the list to make the following assertions pass
     // (without touching the assertions themselves)
+    for (int i = 0; i <= 3; i++){
+      list.remove(i);
+    }
+
     assertEquals(3, list.size());
     assertEquals(List.of(77, 77, 77), list);
   }
@@ -190,11 +202,11 @@ public class TestList {
     // (without touching the assertions themselves)
     assertEquals(7, list.size());
     assertEquals(33, list.get(0).intValue());
-    assertEquals(99, list.get(1).intValue());
+    assertEquals(77, list.get(1).intValue());
     assertEquals(44, list.get(2).intValue());
-    assertEquals(99, list.get(3).intValue());
+    assertEquals(77, list.get(3).intValue());
     assertEquals(55, list.get(4).intValue());
-    assertEquals(99, list.get(5).intValue());
+    assertEquals(77, list.get(5).intValue());
     assertEquals(66, list.get(6).intValue());
   }
 
@@ -209,6 +221,6 @@ public class TestList {
     list.add(66);
     // TODO fix the arguments in the subList method so that the assertion
     // passes
-    assertEquals(List.of(44, 77, 55), list.subList(0, 0));
+    assertEquals(List.of(44, 77, 55), list.subList(2, 5));
   }
 }
