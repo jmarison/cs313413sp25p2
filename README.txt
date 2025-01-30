@@ -11,5 +11,7 @@ TestPerformance.java
     RECORD VALUES:
 
 TestList.java
-    Line 21:
-    Line 96: removes the value 5 from the list at index 5.
+    Line 21: Linked List- 4 ms for 12 tests
+             Array List - 2 ms for 12 tests. so the array list is a lot faster than the linked list
+    Line 99: removes the value 5 from the list at index 5.
+    Line 106: Removes from the List list the index of value 5.
